@@ -39,12 +39,17 @@ class KegControl extends React.Component {
     this.setState({ selectedKeg: selectedKeg });
   }
 
+  handlePourClick = () => {
+    console.log("handleEditClick are the droids you're looking for");
+    this.setState({ editing: true });
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
 
     if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} />
+      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} onClickingPour={this.handlePourClick} />
       buttonText = "Return to Keg List";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />
