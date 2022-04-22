@@ -41,8 +41,20 @@ class KegControl extends React.Component {
 
 
   handlePourClick = (id) => {
-    const selectedKeg = this.state.mainKegList.filter(keg => keg.id === id)[0];
-    console.log(selectedKeg);
+    this.setState((selectedKeg) => ({ 
+      pints: selectedKeg.pints - 1 
+      
+   }))
+   console.log(this.state.selectedKeg.pints);
+
+
+    // this.setState(this.state.selectedKeg.pints = oneFewerPint);
+    
+    // const totalPints = this.selectedKeg.pints;
+    // this.setState(
+    //   totalPints =  currentPints
+    // )
+    
   }
 
   render() {
