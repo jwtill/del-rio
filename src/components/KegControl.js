@@ -17,14 +17,22 @@ class KegControl extends React.Component {
     }));
   }
 
+  handleAddingNewKegToList = (newKeg) => {
+    const newMainKegList = this.state.mainKegList.concat(newKeg);
+    this.setState({
+      mainKegList: newMainKegList,
+      formVisibleOnPage: false
+    });
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
     if (this.state.formVisibleOnPage) { //if true show form
-      currentlyVisibleState = <NewKegForm />
+      currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList}  />
       buttonText = "Return to Keg List";
     } else { //if false, show list, show add keg button
-      currentlyVisibleState = <KegList kegList={this.state.mainKegList}/>
+      currentlyVisibleState = <KegList kegList={this.state.mainKegList} />
       buttonText = "Go to Add Keg Form";
     }
     return (

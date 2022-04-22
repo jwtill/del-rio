@@ -1,17 +1,21 @@
 import React from "react";
 import { v4 } from 'uuid';
+import PropTypes from "prop-types";
 
-function NewKegForm() {
+function NewKegForm(props) {
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    console.log(event.target.name.value);
-    console.log(event.target.brewery.value);
-    console.log(event.target.price.value);
-    console.log(event.target.alcohol.value);
+    props.onNewKegCreation({
+      name: event.target.name.value, 
+      brewery: event.target.brewery.value, 
+      price: event.target.price.value, 
+      alcohol: event.target.alcohol.value, 
+      id: v4()
+    });
   }
   return (
     <React.Fragment>
-      <form onSubmit={handleNewKegFormSubmission}> {/*Call ^^^ function onSubmit*/}
+      <form onSubmit={handleNewKegFormSubmission}>
         <input
           type='text'
           name='name'
@@ -33,5 +37,9 @@ function NewKegForm() {
     </React.Fragment>
   );
 }
+
+NewKegForm.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
 
 export default NewKegForm;

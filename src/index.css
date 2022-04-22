@@ -12,6 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+form {
+  padding: 1%;
+}
+input {
+  margin: 1%;
+}
 #root {
   background-color: lightblue;
   border-radius: 10px;
