@@ -5,7 +5,7 @@ function Keg(props) {
   return (
     <React.Fragment>
         <h3>{props.name} from {props.brewery}</h3>
-        <p><em>${props.price} </em>{props.alcohol}%</p>
+        <p><em>${props.price} per pint </em>{props.alcohol}% Alcohol</p>
         <hr />
     </React.Fragment>
   );
@@ -14,8 +14,8 @@ function Keg(props) {
 Keg.propTypes = {
   name: PropTypes.string,
   brewery: PropTypes.string,
-  price: PropTypes.number,
-  alcohol: PropTypes.number
+  price: PropTypes.string,
+  alcohol: PropTypes.string
 };
 
 export default Keg;
