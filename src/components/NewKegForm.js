@@ -36,7 +36,7 @@ function NewKegForm(props) {
         <input
           type='hidden'
           name='pints'
-          value='260' />
+          value='124' />
         <button type='submit'>Add</button>
       </form>
     </React.Fragment>
