@@ -2,9 +2,16 @@ import React from "react";
 import { v4 } from 'uuid';
 
 function NewKegForm() {
+  function handleNewKegFormSubmission(event) {
+    event.preventDefault();
+    console.log(event.target.name.value);
+    console.log(event.target.brewery.value);
+    console.log(event.target.price.value);
+    console.log(event.target.alcohol.value);
+  }
   return (
     <React.Fragment>
-      <form onSubmit={handleNewKegFormSubmission}>
+      <form onSubmit={handleNewKegFormSubmission}> {/*Call ^^^ function onSubmit*/}
         <input
           type='text'
           name='name'
