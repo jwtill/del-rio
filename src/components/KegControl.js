@@ -41,8 +41,11 @@ class KegControl extends React.Component {
 
 //!
   handlePourClick = () => {
+    this.mainKegList[0].setState({
+      pints: pints - 1
+    })
     
-    console.log(this.state.mainKegList);
+    console.log(this.state.mainKegList[0].pints);
   }
 
   render() {
