@@ -8,6 +8,7 @@ function Keg(props) {
         <h3>{props.name} from {props.brewery}</h3>
         {/* <p><em>${props.price} per pint </em>{props.alcohol}% Alcohol</p> */}
         <hr />
+        <p>{props.pints}</p>
       </div>
     </React.Fragment>
   );
@@ -18,6 +19,7 @@ Keg.propTypes = {
   brewery: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   alcohol: PropTypes.string.isRequired,
+  pints: PropTypes.string,
   id: PropTypes.string, 
   whenKegClicked: PropTypes.func 
 };

@@ -39,9 +39,10 @@ class KegControl extends React.Component {
     this.setState({ selectedKeg: selectedKeg });
   }
 
+//!
   handlePourClick = () => {
-    console.log("handleEditClick are the droids you're looking for");
-    this.setState({ editing: true });
+    
+    console.log(this.state.mainKegList);
   }
 
   render() {

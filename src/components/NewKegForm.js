@@ -6,10 +6,11 @@ function NewKegForm(props) {
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
     props.onNewKegCreation({
-      name: event.target.name.value, 
-      brewery: event.target.brewery.value, 
-      price: event.target.price.value, 
-      alcohol: event.target.alcohol.value, 
+      name: event.target.name.value,
+      brewery: event.target.brewery.value,
+      price: event.target.price.value,
+      alcohol: event.target.alcohol.value,
+      pints: event.target.pints.value,
       id: v4()
     });
   }
@@ -28,10 +29,14 @@ function NewKegForm(props) {
           type='number'
           name='price'
           placeholder='Price per Pint' />
-          <input
+        <input
           type='number'
           name='alcohol'
           placeholder='Alcohol Percentage' />
+        <input
+          type='hidden'
+          name='pints'
+          value='260' />
         <button type='submit'>Add</button>
       </form>
     </React.Fragment>
