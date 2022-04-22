@@ -1,20 +1,16 @@
 import React from "react";
 import Keg from "./Keg";
-import PropTypes from "prop-types";
 
 
-function KegList(props) {
+function KegList() {
   return (
     <React.Fragment>
       <hr />
-      
+      <p>nothing to see here on this list</p>
     </React.Fragment>
   );
 }
 
-KegList.propTypes = {
-  KegList: PropTypes.array,
-  onKegSelection: PropTypes.func
-};
+
 
 export default KegList;
