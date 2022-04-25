@@ -41,17 +41,17 @@ class KegControl extends React.Component {
 
 
   handlePourClick = () => {
-  this.setState(prevState => ({
-    selectedKeg: {
-      ...this.state.selectedKeg,
-      pints: prevState.selectedKeg.pints - 1,
-    },
-  }))
-  if(this.state.selectedKeg.pints === 0) {
-    alert("Time to change the keg!");
+    this.setState(prevState => ({
+      selectedKeg: {
+        ...this.state.selectedKeg,
+        pints: prevState.selectedKeg.pints - 1,
+      },
+    }))
+    if (this.state.selectedKeg.pints === 0) {
+      alert("Time to change the keg!");
+    }
   }
-}
-    
+
 
   render() {
     let currentlyVisibleState = null;
@@ -65,15 +65,15 @@ class KegControl extends React.Component {
       buttonText = "Return to Keg List";
     } else {
       currentlyVisibleState = <KegList kegList={this.state.mainKegList} onKegSelection={this.handleChangingSelectedKeg} />
-    buttonText = "Go to Add Keg Form";
-  }
-  return(
-        <React.Fragment>
-  { currentlyVisibleState }
-  < button onClick = { this.handleClick } > { buttonText }</button >
-        </React.Fragment >
-      );
+      buttonText = "Go to Add Keg Form";
     }
+    return (
+      <React.Fragment>
+        {currentlyVisibleState}
+        < button onClick={this.handleClick} > {buttonText}</button >
+      </React.Fragment >
+    );
   }
+}
 
 export default KegControl;

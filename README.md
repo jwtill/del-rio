@@ -1,4 +1,7 @@
 ![component tree](./src/img/DelRioDetail.png "Component Tree")
+# Del Rio Keg Control
+## By Josh Tillinghast
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
