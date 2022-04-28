@@ -18,8 +18,22 @@ form {
 input {
   margin: 1%;
 }
+#keg {
+  width: 20%;
+  background-color: white;
+  border-radius: 5px;
+}
+#keg div {
+  /* display: inline; */
+  padding: 10px;
+  /* border: 1px solid black; */
+  margin: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
 #root {
   background-color: lightblue;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 20px;
   height: 500px;
