@@ -1,40 +1,141 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 50px;
+  padding: 20px;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-form {
-  padding: 1%;
+h1, h2 {
+  font-family: 'Permanent Marker', cursive;
 }
+
 input {
   margin: 1%;
+  width: 10em;
 }
-#keg {
+
+ul {
+  width: 50%;
+  margin: auto;
+}
+
+li {
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
   width: 20%;
+  height: 15%;
+  background-image: url("./img/beer.jpeg");
+  background-size: cover;
+  opacity: .8;
+  box-shadow: 3px 3px #222222;
+}
+
+li:hover {
+  opacity: 1;
+  cursor: s-resize;
+}
+
+#kegform-wrap {
+  position: relative;
+  left: 25%;
+  margin: auto;
+}
+
+#kegform-wrap:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0.7;
+  background-image: url('./img/bubbles.jpeg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  border-radius: 10px;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 3px 3px #222222;
+}
+#kegform {
+  position: relative;
+  /* right: 10px; */
+  padding: 1%;
+  /* border: 1px solid black; */
+  /* background-color: white; */
+  /* opacity: .8; */
+  border-radius: 5px;
+  /* margin: auto; */
+  width: 48%;
+  box-shadow: 3px 3px #222222;
+}
+
+#header {
+  text-align: center;
   background-color: white;
   border-radius: 5px;
+  opacity: .8;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 60px;
+  border: 1px solid black;
+  box-shadow: 3px 3px #222222;
 }
-#keg div {
-  /* display: inline; */
+
+#details-wrap {
+  position: relative;
+  left: 25%;
+  margin: auto;
+}
+
+#details-wrap:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0.7;
+  background-image: url('./img/bubbles.jpeg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  border-radius: 10px;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 3px 3px #222222;
+}
+
+#details {
+  position: relative;
   padding: 10px;
-  /* border: 1px solid black; */
-  margin: 10px;
-  border-radius: 5px;
-  margin: 5px;
+  margin: auto;
 }
+
 #root {
-  background-color: lightblue;
+  background-image: url("./img/hops.jpeg");
   border: 1px solid black;
   border-radius: 10px;
   padding: 20px;
-  height: 500px;
+  height: 700px;
+}
+
+#tend {
+  margin-left: 24%;
+  position: absolute;
+  top: 22%;
+  box-shadow: 2px 2px #444444;
 }

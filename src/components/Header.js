@@ -3,7 +3,9 @@ import React from "react";
 function Header() {
   return (
     <React.Fragment>
-      <h1>Welcome to the Del Rio</h1>
+      <div id="header">
+        <h1>Welcome to Del Rio Tap Room</h1>
+      </div>
     </React.Fragment>
   );
 }
